@@ -73,7 +73,7 @@ padding is optional but i do this because of lists*/
 
 :where(img, svg, video, canvas, picture) {
     block-size: auto;
-    max-inline-size: 100%
+    max-inline-size: 100%;
 }
 
 /* 8. inherit font and letter spacing for form controls */
@@ -83,7 +83,7 @@ padding is optional but i do this because of lists*/
     select),
 :where(input[type=file])::-webkit-file-upload-button {
     font: inherit;
-    letter-spacing: inherit
+    letter-spacing: inherit;
 }
 
 /* 9. textarea can only resized vertically and will grow to adjust its content */
@@ -103,7 +103,7 @@ padding is optional but i do this because of lists*/
     max-inline-size: max-content;
     min-inline-size: 0;
     white-space: pre;
-    writing-mode: lr
+    writing-mode: horizontal-tb;
 }
 
 :where(a[href],
@@ -121,7 +121,7 @@ padding is optional but i do this because of lists*/
     summary,
     [tabindex]:not([tabindex*="-"],
         pre)) {
-    cursor: pointer
+    cursor: pointer;
 }
 
 /*  this will disable additional non-standard gestures such as double-tap to zoom*/
@@ -136,3 +136,155 @@ padding is optional but i do this because of lists*/
     [tabindex]:not([tabindex*="-"])) {
     touch-action: manipulation
 }
+
+/*  my own css*/
+html, body{
+    height: 100vh;
+}
+
+body{
+    background-color: #00c1b5;
+    font-family: "crimson_Text", serif;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 17px
+}
+
+h1{
+    font-family: "Bitter", serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    padding: 40px 20px;
+}
+
+main img{
+    width: 450px;
+    max-width: 500px;
+    border-radius: 10px;
+    
+}
+
+
+
+.text-bold{
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+}
+
+.text-bold p:first-child{
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+.text-bold a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+    margin: 8px 0;
+}
+
+.text-bold p:last-child{
+    margin-top: 3px;
+    font-size: 16px;
+}
+
+.text-bold p:last-child a{
+    text-decoration: none;
+    color: white;
+    margin: 0;
+}
+
+
+
+/* Footer styles */
+footer{
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    margin-top: -80px;
+}
+
+.left-footer-content{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: -50px;
+    
+}
+
+.text-page{
+    font-size: 15px;
+    font-weight: 700;
+    color: black;   
+    margin-top: 5px;
+    width: 100%;
+}
+
+.text-page p:last-child{
+    font-size: 14px;
+    color: gray;
+}
+.text-page p:last-child span{
+    text-decoration: underline;
+}
+
+
+.left-footer-content a{
+    text-decoration: underline;
+    color: gray;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 15px 0;
+}
+
+/* Right footer - issue navigation */
+.right-footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    padding-top: 8px;
+    margin-top: -50px;}
+
+.right-footer-content a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+
+
+
+
+
